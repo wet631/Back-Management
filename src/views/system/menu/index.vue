@@ -3,7 +3,7 @@
     <div class="header">
       <el-form :inline="true" :model="formInline" ref="ruleFormRef">
         <el-form-item label="菜单名称" prop="username">
-          <el-input v-model="formInline.username" placeholder="请输入菜单名称"/>
+          <el-input v-model="formInline.username" placeholder="请输入菜单名称" />
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit" :icon="Search">查询</el-button>
@@ -19,7 +19,14 @@
         </el-button>
       </div>
       <div class="table-wrap">
-        <el-table :data="tableData" style="width: 100%" border default-expand-all row-key="id" class="table">
+        <el-table
+          :data="tableData"
+          style="width: 100%"
+          border
+          default-expand-all
+          row-key="id"
+          class="table"
+        >
           <el-table-column prop="menuName" label="权限名称" />
           <el-table-column prop="menuType" label="权限类型" />
           <el-table-column prop="menuRouter" label="权限路由" />
@@ -37,14 +44,14 @@
         </el-table>
       </div>
     </div>
-    <MenuDrawer ref="menuDrawerRef"/>
+    <MenuDrawer ref="menuDrawerRef" />
   </div>
 </template>
 
 <script lang="ts" setup>
   import { ElMessageBox, ElMessage, FormInstance } from 'element-plus'
   import { reactive, ref } from 'vue'
-  import {Search } from '@element-plus/icons-vue'
+  import { Search } from '@element-plus/icons-vue'
   import { menuData } from '@/mock/system'
   import MenuDrawer from './components/MenuDrawer.vue'
 
@@ -92,53 +99,51 @@
         row.status = !row.status
       })
   }
-
-
 </script>
 
 <style scoped lang="scss">
-.header{
-  display: flex;
-  padding: 16px 16px 0px 16px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-}
-.footer{
-  flex: 1;
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  border-radius: 4px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-  position: relative;
-  box-sizing: border-box;
-  .util{
-    margin-bottom: 15px;
+  .header {
     display: flex;
-    justify-content: flex-end;
-    flex-shrink: 0;
+    padding: 16px 16px 0px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
   }
-  .table-wrap{
+  .footer {
     flex: 1;
     display: flex;
-    position: relative;
+    padding: 16px;
+    flex-direction: column;
+    border-radius: 4px;
     overflow: hidden;
-  }
-  .table-inner{
-    width: 100%;
-    height: 100%;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
     position: relative;
+    box-sizing: border-box;
+    .util {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+    .table-wrap {
+      flex: 1;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+    .table-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .table {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
-  .table{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%
-  }
-}
 </style>

@@ -75,22 +75,22 @@
 </script>
 
 <style lang="scss" scoped>
-.header{
-  display: flex;
-  padding: 16px 16px 16px 16px;
-  margin-bottom: 12px;
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-}
-.footer{
-  flex: 1;
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  border-radius: 4px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-}
+  .header {
+    display: flex;
+    padding: 16px 16px 16px 16px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
+  }
+  .footer {
+    flex: 1;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
+  }
 </style>

@@ -48,10 +48,10 @@
     { name: 'id', label: 'id' },
     { name: 'name', label: '姓名' },
     { name: 'age', label: '年龄', align: 'right' },
-    {name: 'price', label: '价格', },
+    { name: 'price', label: '价格' },
     { name: 'admin', label: '账号' },
-    { name: 'address', label: '地址',width:180 },
-    { name: 'date', label: '日期' ,width:140},
+    { name: 'address', label: '地址', width: 180 },
+    { name: 'date', label: '日期', width: 140 },
     { name: 'province', label: '省份' },
     { name: 'city', label: '城市' },
     { name: 'zip', label: '邮编' },
@@ -71,36 +71,36 @@
 </script>
 
 <style lang="scss" scoped>
-.header{
-  display: flex;
-  padding: 16px 16px 16px 16px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-}
-.footer{
-  flex: 1;
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  border-radius: 4px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
-  position: relative;
-  box-sizing: border-box;
-  .footer-inner{
+  .header {
+    display: flex;
+    padding: 16px 16px 16px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
+  }
+  .footer {
+    flex: 1;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
     position: relative;
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    .footer-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .table {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
-  .table{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%
-  }
-}
 </style>

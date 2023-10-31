@@ -12,13 +12,21 @@
       />
     </el-select>
   </el-form-item>
-  <el-form-item :label="config?.label" v-if="config.valueType === 'date-picker'" style="width: 100%">
+  <el-form-item
+    :label="config?.label"
+    v-if="config.valueType === 'date-picker'"
+    style="width: 100%"
+  >
     <el-date-picker v-model="value" v-bind="$attrs" style="width: 100%" />
   </el-form-item>
   <el-form-item :label="config?.label" v-if="config.valueType === 'cascader'" style="width: 100%">
     <el-cascader v-model="value" v-bind="$attrs" style="width: 100%" />
   </el-form-item>
-  <el-form-item :label="config?.label" v-if="config.valueType === 'time-select'" style="width: 100%">
+  <el-form-item
+    :label="config?.label"
+    v-if="config.valueType === 'time-select'"
+    style="width: 100%"
+  >
     <el-time-select v-model="value" v-bind="$attrs" style="width: 100%" />
   </el-form-item>
 </template>

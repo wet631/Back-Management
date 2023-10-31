@@ -3,7 +3,7 @@
     <div class="header">
       <el-form :inline="true" :model="formInline" ref="ruleFormRef">
         <el-form-item label="部门名称" prop="username">
-          <el-input v-model="formInline.username" placeholder="请输入部门名称"/>
+          <el-input v-model="formInline.username" placeholder="请输入部门名称" />
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit" :icon="Search">查询</el-button>
@@ -19,26 +19,27 @@
         </el-button>
       </div>
       <div class="table-inner">
-        <el-table
-            v-loading="loading"
-            row-key="id"
-            :data="tableData"
-            style="width: 100%"
-            border>
-          <el-table-column prop="deptName" label="部门名称" align="center"/>
+        <el-table v-loading="loading" row-key="id" :data="tableData" style="width: 100%" border>
+          <el-table-column prop="deptName" label="部门名称" align="center" />
           <el-table-column prop="status" label="状态" align="center">
             <template #default="scope">
               <el-switch
-                  inline-prompt
-                  active-text="启用" inactive-text="禁用"
-                  v-model="scope.row.status" @change="changeStatus(scope.row)" />
+                inline-prompt
+                active-text="启用"
+                inactive-text="禁用"
+                v-model="scope.row.status"
+                @change="changeStatus(scope.row)"
+              />
             </template>
           </el-table-column>
-          <el-table-column prop="remark"
-                           :show-overflow-tooltip="true"
-                           width="300"
-                           label="备注" align="center"/>
-          <el-table-column prop="createTime" label="创建时间" align="center" width="180"/>
+          <el-table-column
+            prop="remark"
+            :show-overflow-tooltip="true"
+            width="300"
+            label="备注"
+            align="center"
+          />
+          <el-table-column prop="createTime" label="创建时间" align="center" width="180" />
           <el-table-column prop="operator" label="操作" width="200px" align="center">
             <template #default="scope">
               <el-button type="primary" size="small" icon="Edit" @click="editHandler(scope.row)">
@@ -52,14 +53,14 @@
         </el-table>
       </div>
     </div>
-    <DeptDialog ref="deptDialog"/>
+    <DeptDialog ref="deptDialog" />
   </div>
 </template>
 
 <script lang="ts" setup>
   import { ElMessageBox, ElMessage, FormInstance } from 'element-plus'
-  import {Search } from '@element-plus/icons-vue'
-  import {onMounted, reactive, ref} from 'vue'
+  import { Search } from '@element-plus/icons-vue'
+  import { onMounted, reactive, ref } from 'vue'
   import { deptData } from '@/mock/system'
   import DeptDialog from './components/deptDialog.vue'
 
@@ -70,25 +71,25 @@
   const ruleFormRef = ref<FormInstance>()
   const formInline = reactive({})
 
-  onMounted(()=>{
-    setTimeout(()=>{
+  onMounted(() => {
+    setTimeout(() => {
       loading.value = false
-    },500)
+    }, 500)
   })
 
   const onSubmit = () => {
     console.log('submit!', formInline)
     loading.value = true
-    setTimeout(()=>{
+    setTimeout(() => {
       loading.value = false
-    },500)
+    }, 500)
   }
 
   const reset = (formEl: FormInstance | undefined) => {
     loading.value = true
-    setTimeout(()=>{
+    setTimeout(() => {
       loading.value = false
-    },500)
+    }, 500)
   }
 
   const addHandler = () => {
@@ -126,5 +127,5 @@
 </script>
 
 <style scoped lang="scss">
-@import "./index";
+  @import './index';
 </style>
