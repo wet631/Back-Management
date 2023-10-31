@@ -44,6 +44,7 @@
     describe: null,
     status: true,
   })
+
   const defaultProps = {
     children: 'children',
     label: 'menuName',
@@ -67,7 +68,6 @@
     }
     dialogVisible.value = true
   }
-
   const rules = reactive({
     roleName: [{ required: true, message: '请输入角色名称', trigger: 'blur' }],
     roleIdentification: [{ required: true, message: '请输入角色标识', trigger: 'blur' }],

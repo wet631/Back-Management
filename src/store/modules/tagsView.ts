@@ -11,7 +11,6 @@ export const useTagsViewStore = defineStore({
     cachedViews: [],
   }),
   getters: {},
-  // 可以同步 也可以异步
   actions: {
     setTabsMenuValue(val) {
       this.activeTabsValue = val

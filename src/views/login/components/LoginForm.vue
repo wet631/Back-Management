@@ -91,14 +91,13 @@
           })
           ElNotification({
             title: getTimeStateStr(),
-            message: '欢迎登录 Vue Admin Perfect',
+            message: '欢迎登录 Vue Admin',
             type: 'success',
             duration: 3000,
           })
           loading.value = true
         }, 1000)
       } else {
-        console.log('error submit!')
         return false
       }
     })

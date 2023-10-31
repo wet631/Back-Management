@@ -88,7 +88,6 @@
   const currentPage1 = ref(1)
 
   const onSubmit = () => {
-    console.log('submit!', formInline)
     loading.value = true
     setTimeout(() => {
       loading.value = false

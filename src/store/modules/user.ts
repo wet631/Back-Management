@@ -12,8 +12,6 @@ export const useUserStore = defineStore({
     // 角色
     roles: localStorage.roles ? JSON.parse(localStorage.roles) : [],
   }),
-  getters: {},
-  // 可以同步 也可以异步
   actions: {
     // 登录
     login(userInfo) {

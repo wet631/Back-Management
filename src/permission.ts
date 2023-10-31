@@ -10,6 +10,7 @@ const whiteList = ['/login', '/auth-redirect'] // 设置白名单
 // 记录路由
 let hasRoles = true
 
+// 前置守卫
 router.beforeEach(async (to, from, next) => {
   // 开启进度条
   NProgress.start()
