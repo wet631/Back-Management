@@ -9,7 +9,7 @@ const othersRouter = [
     redirect: '/other/clipboard',
     name: 'other',
     meta: {
-      title: '常用组件',
+      title: '组件管理',
       icon: 'management',
     },
     children: [

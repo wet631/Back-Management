@@ -3,13 +3,11 @@
     <Mobile />
     <LayoutVertical v-if="device === 'mobile'" />
     <component :is="LayoutComponents[themeConfig.mode]" v-else />
-    <!-- <Theme /> -->
   </div>
 </template>
 
 <script lang="ts" setup>
   import { computed, watch } from 'vue'
-  // import Theme from '@/components/Theme/index.vue'
   import Mobile from './components/Mobile/index.vue'
   import { useSettingStore } from '@/store/modules/setting'
   import { useResizeHandler } from '@/hooks/useResizeHandler'

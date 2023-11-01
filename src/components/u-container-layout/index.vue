@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 10px 12px;
+    padding: 14px 12px;
     box-sizing: border-box;
     .m-container-layout-inner {
       flex: 1;

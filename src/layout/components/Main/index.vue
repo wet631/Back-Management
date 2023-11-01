@@ -33,6 +33,7 @@
       display: flex;
       overflow-x: hidden;
       width: 100%;
+      margin-top: 10px;
       box-sizing: border-box;
     }
   }

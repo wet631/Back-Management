@@ -10,7 +10,7 @@ const formRouter = [
     name: 'form',
     alwaysShow: true,
     meta: {
-      title: '超级表单',
+      title: '表单管理',
       icon: 'Grape',
     },
     children: [

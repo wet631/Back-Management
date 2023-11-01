@@ -9,7 +9,7 @@ const functionPageRouter = [
     redirect: '/function-page/404',
     name: 'function-page',
     meta: {
-      title: '功能页面',
+      title: '功能管理',
       icon: 'ElementPlus',
     },
     children: [

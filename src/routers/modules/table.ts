@@ -9,7 +9,7 @@ const tableRouter = [
     redirect: '/table/comprehensive',
     name: 'table',
     meta: {
-      title: '超级表格',
+      title: '表格管理',
       icon: 'School',
     },
     children: [

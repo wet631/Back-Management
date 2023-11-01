@@ -141,8 +141,9 @@
   .tags-view {
     .el-tabs--card :deep(.el-tabs__header) {
       box-sizing: border-box;
-      height: 40px;
-      padding: 0 10px;
+      height: 50px;
+      // padding: 5px 10px;
+      line-height: 50px;
       margin: 0;
     }
     :deep(.el-tabs) {
@@ -155,8 +156,13 @@
       }
       .el-tabs__header .el-tabs__item.is-active {
         color: $primaryColor;
-        // border: 2px solid $primaryColor;
+        border-radius: 4px;
+        border: 1px solid #409eff;
       }
     }
+  }
+
+  .el-tabs {
+    --el-tabs-header-height: 30px;
   }
 </style>

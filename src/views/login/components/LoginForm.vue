@@ -1,7 +1,7 @@
 <template>
   <div class="login-title">
     <img class="icon" src="@/assets/image/logo.png" alt="logo" />
-    <h2 class="title">Vue-Admin-Perfect</h2>
+    <h2 class="title">Back-Management</h2>
   </div>
   <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules">
     <el-form-item label="" prop="username">
@@ -10,7 +10,7 @@
         autoComplete="on"
         style="position: relative"
         v-model="ruleForm.username"
-        @keyup.enter.native="submitForm(ruleFormRef)"
+        @keyup.enter="submitForm(ruleFormRef)"
       >
         <template #prefix>
           <el-icon class="el-input__icon"><UserFilled /></el-icon>
@@ -22,7 +22,7 @@
       <el-input
         placeholder="请输入密码"
         autoComplete="on"
-        @keyup.enter.native="submitForm(ruleFormRef)"
+        @keyup.enter="submitForm(ruleFormRef)"
         v-model="ruleForm.password"
         :type="passwordType"
       >
@@ -85,6 +85,7 @@
         loading.value = true
         // 登录
         setTimeout(async () => {
+          // 这里要保存token
           await UserStore.login(ruleForm)
           await router.push({
             path: '/',

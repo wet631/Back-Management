@@ -1,12 +1,12 @@
 <template>
   <div class="footer-layout">
-    <span href="/" target="_blank"> 2022 © VUE-ADMIN-PERFECT By ZB Technology. </span>
+    <span href="/" target="_blank">  </span>
   </div>
 </template>
 
 <style scoped lang="scss">
   .footer-layout {
-    height: 40px;
+    // height: 40px;
     font-size: 12px;
     display: flex;
     align-items: center;
