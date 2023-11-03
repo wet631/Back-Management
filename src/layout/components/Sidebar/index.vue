@@ -11,6 +11,8 @@
         class="el-menu-vertical-demo"
         :collapse="isCollapse"
       >
+        <!-- el-menu 打开所有子菜单  -->
+        <!-- :default-openeds="allSubMenuPaths" -->
         <SubItem v-for="route in permission_routes" :key="route.path" :item="route" />
       </el-menu>
     </el-scrollbar>
@@ -22,8 +24,9 @@
   import SubItem from '../SubMenu/SubItem.vue'
   import { useSettingStore } from '@/store/modules/setting'
   import { usePermissionStore } from '@/store/modules/permission'
-  import { computed } from 'vue'
+  import { computed, ref } from 'vue'
   import { useRoute } from 'vue-router'
+  import { pa } from 'element-plus/es/locale'
 
   // 在setup中获取store
   const route = useRoute()
@@ -38,8 +41,14 @@
   // 获取路由
   const permission_routes = computed(() => PermissionStore.permission_routes)
 
+  // 获取所有子菜单的路径,打开所有子菜单
+  const allSubMenuPaths = computed(() => {
+    return permission_routes.value.map((route) => route.path)
+  })
+
   const activeMenu = computed(() => {
     const { meta, path } = route
+
     if (meta.activeMenu) {
       return meta.activeMenu
     }

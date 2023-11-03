@@ -1,9 +1,11 @@
 <template>
   <div class="main-columns">
     <div class="layout-columns-aside">
+
       <div class="logo flex-center">
         <img src="@/assets/image/logo.png" alt="logo" />
       </div>
+
       <el-scrollbar>
         <div class="menu-wrap">
           <div
@@ -64,13 +66,15 @@
   import Footer from '../components/Footer/index.vue'
   import SubMenu from '../components/SubMenu/SubMenu.vue'
   import TagsView from '../components/TagsView/index.vue'
+  import HeaderToolRight from '../components/Header/ToolRight.vue'
+  import HeaderToolLeft from '../components/Header/ToolLeft.vue'
+  import Main from '../components/Main/index.vue'
+  
   const PermissionStore = usePermissionStore()
   const SettingStore = useSettingStore()
   const route = useRoute()
   const router = useRouter()
-  import HeaderToolRight from '../components/Header/ToolRight.vue'
-  import HeaderToolLeft from '../components/Header/ToolLeft.vue'
-  import Main from '../components/Main/index.vue'
+
   // 获取路由
   const permission_routes = computed(() => PermissionStore.permission_routes)
 

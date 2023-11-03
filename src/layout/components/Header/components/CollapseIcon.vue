@@ -5,12 +5,14 @@
   </div>
 </template>
 <script lang="ts" setup>
+  // menu 是否收缩 左上折叠效果
   import { useSettingStore } from '@/store/modules/setting'
   import { computed } from 'vue'
   const SettingStore = useSettingStore()
 
   const isCollapse = computed(() => !SettingStore.isCollapse)
 
+  // 点击munu折叠效果
   const handleCollapse = () => {
     SettingStore.setCollapse(isCollapse.value)
   }

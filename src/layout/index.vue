@@ -1,8 +1,10 @@
 <template>
   <div class="g-container-layout" :class="classObj">
-    <Mobile />
-    <LayoutVertical v-if="device === 'mobile'" />
-    <component :is="LayoutComponents[themeConfig.mode]" v-else />
+    <!-- <Mobile /> -->
+    <!-- <LayoutVertical v-if="device === 'mobile'" /> -->
+    <LayoutVertical />
+    <!-- 用来设置是否是移动端项目 -->
+    <!-- <component :is="LayoutComponents[themeConfig.mode]" v-else /> -->
   </div>
 </template>
 
@@ -27,6 +29,7 @@
   const isCollapse = computed(() => {
     return !SettingStore.isCollapse
   })
+
   let { device } = useResizeHandler()
 
   watch(

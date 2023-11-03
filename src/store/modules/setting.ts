@@ -48,6 +48,7 @@ export const useSettingStore = defineStore({
     setThemeConfig({ key, val }) {
       this.themeConfig[key] = val
     },
+    // menu 是否收缩
     // 切换 Collapse
     setCollapse(value) {
       this.isCollapse = value

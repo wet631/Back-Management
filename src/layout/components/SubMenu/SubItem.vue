@@ -2,7 +2,7 @@
   <template v-if="!item.hidden">
     <template v-if="!item.alwaysShow && hasOneShowingChild(item.children, item)">
       <app-link v-if="onlyOneChild.meta" :to="onlyOneChild.path">
-        <el-menu-item :index="onlyOneChild.path">
+        <el-menu-item :index="onlyOneChild.path" >
           <el-icon :size="20">
             <component :is="onlyOneChild?.meta.icon"></component>
           </el-icon>
@@ -25,6 +25,7 @@
   import AppLink from './Link.vue'
   import path from 'path-browserify'
   import { ref, computed } from 'vue'
+
   const props = defineProps({
     item: {
       type: Object,

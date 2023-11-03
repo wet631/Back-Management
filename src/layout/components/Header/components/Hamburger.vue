@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts" setup>
+  // 面包屑导航栏
   import { computed } from 'vue'
   import { useRoute, useRouter } from 'vue-router'
 
@@ -27,6 +28,7 @@
   const router = useRouter()
 
   const handleLink = (item) => {
+    // console.log(item,'item');
     router.push({
       path: item.path,
     })
@@ -34,5 +36,6 @@
 
   const matched = computed(() =>
     route.matched.filter((item) => item.meta && item.meta.title && item.meta.breadcrumb !== false),
+    
   )
 </script>
