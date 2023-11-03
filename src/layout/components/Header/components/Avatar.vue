@@ -7,6 +7,7 @@
         <arrow-down />
       </el-icon>
     </span>
+
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :command="0" @click="switchRolesAction('admin')">
@@ -24,7 +25,6 @@
       </el-dropdown-menu>
     </template>
   </el-dropdown>
-
   <PersonalDialog ref="person" />
 </template>
 
@@ -59,10 +59,11 @@
     },
   })
 
-  const switchRolesAction = (type: string) => {
-    if (type === currentRoles.value) return
-    currentRoles.value = currentRoles.value === 'admin' ? 'other' : 'admin'
-  }
+  // 选择切换角色
+  // const switchRolesAction = (type: string) => {
+  //   if (type === currentRoles.value) return
+  //   currentRoles.value = currentRoles.value === 'admin' ? 'other' : 'admin'
+  // }
 
   // 用户信息
   const userInfo = computed(() => UserStore.userInfo)
@@ -97,7 +98,6 @@
   }
   .el-dropdown-link {
     cursor: pointer;
-    //color: var(--el-color-primary);
     display: flex;
     align-items: center;
   }

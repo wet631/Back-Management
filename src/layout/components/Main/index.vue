@@ -15,6 +15,7 @@
   import { computed, ref } from 'vue'
   import { useSettingStore } from '@/store/modules/setting'
   import { usePermissionStore } from '@/store/modules/permission'
+  
   const SettingStore = useSettingStore()
   const PermissionStore = usePermissionStore()
   const cacheRoutes = computed(() => PermissionStore.keepAliveRoutes)

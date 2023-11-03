@@ -7,7 +7,20 @@
   import { EChartsType } from 'echarts/core'
   import { onMounted, ref, reactive } from 'vue'
   const chartsRef = ref<HTMLElement | null>()
-
+  const lineData = ref([
+    {
+      year: '',
+      data: [],
+    },
+    {
+      year: '',
+      data: [],
+    },
+    {
+      year: '',
+      data: [],
+    },
+  ])
   const options = {
     grid: {
       top: '10%',

@@ -30,24 +30,28 @@
 <script lang="ts" setup>
   import { ref, defineExpose, reactive } from 'vue'
   import type { ElForm } from 'element-plus'
-  const dialogVisible = ref(false)
   import { useUserStore } from '@/store/modules/user'
   const UserStore = useUserStore()
+  const dialogVisible = ref(false)
+
   const show = () => {
     dialogVisible.value = true
   }
   const hide = () => {
     dialogVisible.value = false
   }
+
   type FormInstance = InstanceType<typeof ElForm>
 
   const formSize = ref('')
   const ruleFormRef = ref<FormInstance>()
+
   const ruleForm = reactive({
     name: UserStore.userInfo.username,
     password: UserStore.userInfo.password,
     configPassword: '',
   })
+
   const rules = reactive({
     configPassword: [
       {
@@ -57,6 +61,7 @@
       },
     ],
   })
+
   const submitForm = (formEl: FormInstance | undefined) => {
     if (!formEl) return
     formEl.validate((valid) => {

@@ -2,15 +2,15 @@
  * DH (http://denghao.me)
  * 2017-7-14
  */
-;(function (window, document) {
+; (function (window, document) {
   var Print = function (dom, options) {
     if (!(this instanceof Print)) return new Print(dom, options)
 
     this.options = this.extend(
       {
         noPrint: '.no-print',
-        onStart: function () {},
-        onEnd: function () {},
+        onStart: function () { },
+        onEnd: function () { },
       },
       options,
     )

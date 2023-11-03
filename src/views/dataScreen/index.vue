@@ -2,7 +2,7 @@
   <full-screen-container>
     <div class="m-data-screen">
       <div class="header">
-        <div class="header-bg-title">访问量大数据展示平台</div>
+        <div class="header-bg-title">大数据展示平台</div>
         <div class="date">{{ timeDate }} {{ hourTime }} </div>
       </div>
       <div class="center">
@@ -64,6 +64,7 @@
   const timeDate = ref()
   const hourTime = ref()
   const time1 = ref()
+
   const getHour = () => {
     let date = new Date()
     let hour = date.getHours().toString().padStart(2, '00')
@@ -84,6 +85,7 @@
     timeDate.value = `${year}年${month}月${day}日`
     getHour()
   }
+
   onMounted(() => {
     getNowTime()
   })

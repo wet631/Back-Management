@@ -12,7 +12,7 @@ interface extendRoute {
 }
 //
 import tableRouter from './modules/table'
-// import dataScreenRouter from './modules/dataScreen'
+import dataScreenRouter from './modules/dataScreen'
 // import echartsRouter from './modules/echarts'
 import excelRouter from './modules/excel'
 import nestedRouter from './modules/nested'
@@ -23,7 +23,7 @@ import functionPageRouter from './modules/functionPage'
 
 // 异步组件
 export const asyncRoutes = [
-  // ...dataScreenRouter,
+  ...dataScreenRouter,
   // ...echartsRouter,
   ...tableRouter,
   ...formRouter,

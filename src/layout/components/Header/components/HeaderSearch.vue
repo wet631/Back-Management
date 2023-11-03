@@ -36,13 +36,13 @@
   import Fuse from 'fuse.js'
   import { useVueFuse } from 'vue-fuse'
   import { useRouter } from 'vue-router'
+  import { usePermissionStore } from '@/store/modules/permission'
   const router = useRouter()
   const isShowSearch = ref(false)
   const options = ref([])
   const searchPool = ref([])
   const search = ref('')
   const fuse = ref(null)
-  import { usePermissionStore } from '@/store/modules/permission'
   const PermissionStore = usePermissionStore()
   const routes = computed(() => PermissionStore.routes)
 
@@ -119,6 +119,7 @@
     search.value = ''
     isShowSearch.value = false
   }
+
   onMounted(() => {
     searchPool.value = generateRoutes(JSON.parse(JSON.stringify(routes.value)))
   })
