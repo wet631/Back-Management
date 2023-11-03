@@ -53,6 +53,7 @@
       mobile: device.value === 'mobile',
     }
   })
+  
 </script>
 
 <style lang="scss" scoped>

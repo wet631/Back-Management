@@ -10,6 +10,7 @@
         :collapse-transition="false"
         class="el-menu-vertical-demo"
         :collapse="isCollapse"
+        :default-openeds="allSubMenuPaths"
       >
         <!-- el-menu 打开所有子菜单  -->
         <!-- :default-openeds="allSubMenuPaths" -->
@@ -38,7 +39,7 @@
   // 设置
   const themeConfig = computed(() => SettingStore.themeConfig)
 
-  // 获取路由
+  // 获取到所有的路由信息
   const permission_routes = computed(() => PermissionStore.permission_routes)
 
   // 获取所有子菜单的路径,打开所有子菜单
