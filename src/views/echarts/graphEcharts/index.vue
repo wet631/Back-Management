@@ -9,6 +9,7 @@
   import * as echarts from 'echarts'
   import { useResizeElement } from '@/hooks/useResizeElement'
 
+  const cha = ref()
   const chartsRef = ref<HTMLElement | null>()
   let options = {
     normal: {
