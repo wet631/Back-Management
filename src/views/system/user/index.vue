@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
   import UserTable from './components/userTable.vue'
   import UserSide from './components/userSide.vue'
 </script>

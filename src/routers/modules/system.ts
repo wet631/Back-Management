@@ -14,6 +14,18 @@ const systemRouter = [
     },
     children: [
       {
+        path: '/system/userTwo',
+        component: () => import('@/views/system/userTwo/index.vue'),
+        name: 'userTwo',
+        meta: { title: '用户管理2', icon: 'MenuIcon' },
+      },
+      {
+        path: '/system/userOne',
+        component: () => import('@/views/system/userOne/index.vue'),
+        name: 'userOne',
+        meta: { title: '用户管理1', icon: 'MenuIcon' },
+      },
+      {
         path: '/system/user',
         component: () => import('@/views/system/user/index.vue'),
         name: 'user',
